@@ -17,9 +17,9 @@ private void binarySearch(String[] array, String key) {
 	
 	for (int i = 0; i < html.length; i++) {
 	   	
-	   	String key = html[i];  
+	   	String key = html[i];
         int max= (html.length -1);
-        int min = 0; 
+        int min = 0;
        
         binarySearch(wordsArray, key);
 	}
