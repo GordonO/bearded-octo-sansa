@@ -3,7 +3,9 @@ import HTMLWordsArray;
 import URLReader;
 
 
+
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class Main {
@@ -21,9 +23,11 @@ public static void main(String [] arguments) throws IOException {
 	
 	for (String urlstring : urlstringarray) {
 		String[] HTMLArray = htmlarray.getHTMLArray(urlstring);
+		ArrayList<String> matchingWords = binarysearch.getMatchedWordsArray(HTMLArray); 
+		
 		
 
 	} 
 } 
 }
-}
+
