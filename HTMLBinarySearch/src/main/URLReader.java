@@ -10,8 +10,7 @@ import java.util.List;
 
 public class URLReader {
 
-	public  String[] getUrlArray() {
-
+	public static String[] getUrlArray() {
 
 		File file = new File("url.txt");
 		String line = null;
@@ -20,9 +19,9 @@ public class URLReader {
 
 		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 			while ((line = br.readLine()) != null) {
-		            urlList.add(line);
-		        }
-			 urlStringArray = urlList.toArray(new String[0]); 
+				urlList.add(line);
+			}
+			urlStringArray = urlList.toArray(new String[0]);
 
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found: " + file.toString());
@@ -32,5 +31,4 @@ public class URLReader {
 		}
 		return urlStringArray;
 	}
-	}
-
+}
