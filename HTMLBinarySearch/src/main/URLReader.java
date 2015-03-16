@@ -8,7 +8,10 @@ import java.io.IOException;
 
 public class URLReader {
 
-	public static String getUrl() {
+//	public static String getUrl() {
+	public static void main(String[] args) {
+		
+	
 
 		File file = new File("url.txt");
 		String line = null;
@@ -24,6 +27,7 @@ public class URLReader {
 		} catch (IOException e) {
 			System.out.println("Unable to open file: " + file.toString());
 		}
-		return line;
+//		return line;
 	}
 }
+

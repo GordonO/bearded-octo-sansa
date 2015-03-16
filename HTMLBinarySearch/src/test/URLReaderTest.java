@@ -1,24 +1,22 @@
 package test;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-import main.URLReader;
+import static org.junit.Assert.assertNotNull;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+
+import main.URLReader;
 
 import org.junit.Before;
 import org.junit.Test;
 
 public class URLReaderTest {
-	private URLReader read = null;
-
-	@Before
-	public void initialize() {
-		read = new URLReader();
-	}
+//	private URLReader read = null;
+//
+//	@Before
+//	public void initialize() {
+//		read = new URLReader();
+//	}
 
 	@Test
 	public void testFileShouldNotBeNull() throws FileNotFoundException {
