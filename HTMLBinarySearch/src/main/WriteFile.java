@@ -21,6 +21,9 @@ public class WriteFile {
 		File file9 = new File("file9.html");
 		File file10 = new File("file10.html");
 		
+		for (int j = 0; j < URLarray.length; j++) {
+			File scrapedFile= file[j];
+		}
 		
 
 		try (BufferedWriter br = new BufferedWriter(
