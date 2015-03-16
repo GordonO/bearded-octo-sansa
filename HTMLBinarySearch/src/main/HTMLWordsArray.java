@@ -10,6 +10,35 @@ import org.jsoup.*;
 import org.jsoup.nodes.Document;
 
 public class HTMLWordsArray {
+		
+		public String[] getHTMLArray(String inUrlString) throws IOException { 
+		String[] htmlArray;  
+		
+		Document doc = Jsoup.connect(inUrlString).get(); 
+		
+		String contents = doc.body().text(); 
+		String htmlString = doc.html();
+
+		contents = contents.toLowerCase(); 
+		contents = contents.replaceAll("[^a-z]", " ").trim();  
+		
+		List<String> htmlList = Arrays.asList(contents.split("\\s+")); 	
+		List<String> list = new ArrayList<String>();
+		htmlArray = htmlList.toArray(new String[0]);
+		
+		return htmlArray; 
+		
+		
+		
+		
+		
+//			for (String stuff : htmlArray) { 
+//			System.out.println(stuff); 
+			}
+
+	} 
+
+
 
 //	public String[] htmlArray;
 
@@ -34,18 +63,18 @@ public class HTMLWordsArray {
 //		
 //	}
 
-	public void htmlWordsArray() {
-		
-		String[] htmlArray;
-		Document doc = (Document) Jsoup.connect(URLReader.getUrl());//.get();
-
-		String contents = doc.body().text();
-
-		contents = contents.toLowerCase();
-		contents = contents.replaceAll("[^a-z]", " ").trim();
-
-		List<String> htmlList = Arrays.asList(text.split("\\s+"));
-		List<String> list = new ArrayList<String>();
-		htmlArray = htmlList.toArray(new String[0]);
-	}
-}
+//	public void htmlWordsArray() {
+//		
+//		String[] htmlArray;
+//		Document doc = (Document) Jsoup.connect(URLReader.getUrl());//.get();
+//
+//		String contents = doc.body().text();
+//
+//		contents = contents.toLowerCase();
+//		contents = contents.replaceAll("[^a-z]", " ").trim();
+//
+//		List<String> htmlList = Arrays.asList(text.split("\\s+"));
+//		List<String> list = new ArrayList<String>();
+//		htmlArray = htmlList.toArray(new String[0]);
+//	}
+//}

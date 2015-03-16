@@ -1,43 +1,23 @@
-package main;
-
 import java.util.*; 
 
 public class BinarySearchWordsArray {
-
-	HTMLWordsArray hwa = new HTMLWordsArray();
-	String[] html = hwa.htmlArray;
-	LinkedList<String> matchedWords = new LinkedList<String>();
-
 	
-		  
-		  
-private void binarySearch(String[] array, String key) {
-	int min = 0; 
-	int max = array.length;
+
+	public ArrayList<String> getMatchedWordsArray() { 
+		VocabReader vr = new VocabReader();
 	
-	for (int i = 0; i < html.length; i++) {
-	   	
-	   	String key = html[i];  
-        int max= (html.length -1);
-        int min = 0; 
-       
-        binarySearch(wordsArray, key);
-	}
-	       
+		HTMLWordsArray hwa = new HTMLWordsArray();
+		String[] html = hwa.getHTMLArray(); 
 		
-		
-	                                      
-	    while (min <= max) {
-	         int i = (min + max) / 2;
-	         if (array[i].compareTo(key) < 0) {
-	                min = i + 1;
-	            } else if (array[i].compareTo(key) > 0) {
-	                max = i - 1;
-	            } else {
-	                matchedWords.add(key); 
-	                
-	            }
-	    }
+		ArrayList<String> matchedWords = new ArrayList<String>();  
+		for (int i = 0; i < html.length; i++) {
+			String word = html[i]; 
+			int ret = Arrays.binarySearch(vr.wordsArray, html[i]); 
+			
+			if (ret > 0) { 
+				matchedWords.add(word);
+			}
+			return matchedWords; 
+			}
+		}
 	}
-}
-}
