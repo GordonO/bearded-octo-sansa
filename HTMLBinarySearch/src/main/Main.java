@@ -1,6 +1,8 @@
-import BinarySearchWordsArray;
-import HTMLWordsArray;
-import URLReader;
+package main;
+
+import main.BinarySearchWordsArray;
+import main.HTMLWordsArray;
+import main.URLReader;
 
 
 import java.io.IOException;
@@ -26,4 +28,4 @@ public static void main(String [] arguments) throws IOException {
 	} 
 } 
 }
-}
+
